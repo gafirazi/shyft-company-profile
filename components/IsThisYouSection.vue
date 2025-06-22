@@ -29,10 +29,8 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
-import gsap from 'gsap'
-import ScrollTrigger from 'gsap/ScrollTrigger'
 
-gsap.registerPlugin(ScrollTrigger)
+const { $gsap } = useNuxtApp()
 
 const stickySection = ref(null)
 const centerText = ref(null)
@@ -62,13 +60,13 @@ onMounted(() => {
 
     // Set initial state: all bubbles at center, opacity 0
     bubbles.forEach((bubble, i) => {
-      gsap.set(bubble.value, { x: -offsets[i].x, y: -offsets[i].y, opacity: 0 });
+      $gsap.set(bubble.value, { x: -offsets[i].x, y: -offsets[i].y, opacity: 0 });
     });
 
-    gsap.set(centerText.value, { scale: 1, opacity: 1 });
+    $gsap.set(centerText.value, { scale: 1, opacity: 1 });
 
     // Pin the entire section and animate bubbles as user scrolls
-    const tl = gsap.timeline({
+    const tl = $gsap.timeline({
       scrollTrigger: {
         trigger: stickySection.value,
         start: 'top top',

@@ -30,8 +30,8 @@
         <div>
           <h4 class="font-semibold mb-4">Contact</h4>
           <div class="space-y-2 text-gray-400">
-            <p>+1234 567 89</p>
-            <p>hello@Shyftcom</p>
+            <!-- <p>+1234 567 89</p> -->
+            <p>shyftid@gmail.com</p>
           </div>
           <div class="flex space-x-4 mt-4">
             <a href="#" class="text-gray-400 hover:text-white transition-colors">X/Twitter</a>

@@ -33,7 +33,7 @@
           <div class="hidden md:block">
             <button 
               @click.prevent="handleScrollToSection('contact')"
-              class="px-6 py-2 rounded-full bg-gradient-to-r from-[#A250F7] to-[#6ec3f4] text-white hover:opacity-90 transition-all whitespace-nowrap"
+              class="px-6 py-2 rounded-full bg-gradient-to-r from-[#A250F7] to-[#1e93d7] text-white hover:opacity-90 transition-all whitespace-nowrap"
             >
               Get Started
             </button>
@@ -69,7 +69,7 @@
                 </a>
                 <button 
                   @click.prevent="handleScrollToSection('contact')"
-                  class="w-full py-2 rounded-full bg-gradient-to-r from-[#A250F7] to-[#6ec3f4] text-white hover:opacity-90 transition-all"
+                  class="w-full py-2 rounded-full bg-gradient-to-r from-[#A250F7] to-[#1e93d7] text-white hover:opacity-90 transition-all"
                 >
                   Get Started
                 </button>

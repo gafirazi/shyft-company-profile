@@ -1,5 +1,5 @@
 <template>
-  <section class="section-padding bg-[#010319] overflow-hidden py-24 sm:py-32">
+  <section ref="techStackSection" class="section-padding bg-[#010319] overflow-hidden py-24 sm:py-32">
     <div class="max-w-[1200px] mx-auto px-4">
       <div class="container-max text-center">
         <h2 class="text-4xl md:text-5xl font-bold mb-24 text-white">
@@ -23,7 +23,7 @@
               <div class="card-content">
                 <div class="card-header">[0{{ index + 1 }}]</div>
                 <div class="logo-container">
-                  <img :src="tech.logo" :alt="tech.name" class="w-100 h-100 object-contain" />
+                  <img :src="tech.logo" :alt="tech.name" class="w-100 h-100 object-contain logo-img" />
                 </div>
                 <span class="tech-name trust-gradient">{{ tech.name }}</span>
               </div>
@@ -37,6 +37,8 @@
 
 <script setup>
 import { ref, onMounted } from 'vue';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 // Define your tech stack here.
 // Make sure to add the correct paths to your logo files.
@@ -44,14 +46,35 @@ const techStack = ref([
   { name: 'OPEN AI', logo: 'https://upload.wikimedia.org/wikipedia/commons/4/4d/OpenAI_Logo.svg' },
   { name: 'ZAPIER', logo: 'https://upload.wikimedia.org/wikipedia/commons/f/fd/Zapier_logo.svg' },
   { name: 'AIRTABLE', logo: 'https://upload.wikimedia.org/wikipedia/commons/4/4b/Airtable_Logo.svg' },
-  { name: 'LANGCHAIN', logo: 'https://raw.githubusercontent.com/lobehub/lobe-chat/main/public/icons/langchain/mono.svg' },
+  { name: 'VUE', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/640px-Vue.js_Logo_2.svg.png' },
   { name: 'PYTHON', logo: 'https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg' },
 ]);
 
 const isExpanded = ref(false);
 const hoveredIndex = ref(null);
+const techStackSection = ref(null);
 
 onMounted(() => {
+  if (process.client) {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: techStackSection.value,
+        start: 'top 80%',
+        end: 'bottom 20%',
+        toggleActions: 'play none none reverse',
+      },
+    });
+
+    tl.from(techStackSection.value.querySelector('h2'), {
+      opacity: 0,
+      y: 50,
+      duration: 0.8,
+      ease: 'power3.out',
+    });
+  }
+
   const section = document.querySelector('.tech-stack-container');
   if (!section) return;
 
@@ -137,6 +160,10 @@ onMounted(() => {
   justify-content: center;
   align-items: center;
   padding: 1rem; /* Add some padding */
+}
+
+.logo-img {
+  max-height: 100px;
 }
 
 /* 

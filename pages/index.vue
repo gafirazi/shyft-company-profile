@@ -1,12 +1,12 @@
 <template>
   <div>
     <HeroSection />
-    <IsThisYouSection />
+    <!-- <IsThisYouSection /> -->
     <SolutionsSection />
     <CaseStudiesSection />
     <TrustSection />
     <TechStackSection />
-    <TestimonialsSection />
+    <!-- <TestimonialsSection /> -->
     <!-- <PricingSection /> -->
     <!-- <TeamSection /> -->
     <!-- <FAQSection /> -->

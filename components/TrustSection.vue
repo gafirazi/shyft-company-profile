@@ -1,61 +1,117 @@
 <template>
-  <section class="section-padding bg-[#010319]">
+  <section ref="trustSection" class="section-padding bg-[#010319]">
     <div class="max-w-[1200px] mx-auto px-4">
       <div class="container-max text-center">
         <h2 class="text-5xl md:text-6xl font-bold mb-2 text-white">
-          Why Top Brands <span class="trust-gradient">Trust Us</span>
+          Why Brands <span class="trust-gradient">Trust Us</span>
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mt-12">
           <!-- Card 1 -->
           <div class="trust-card">
             <div class="trust-icon-wrap">
-              <img src="https://cdn.jsdelivr.net/gh/3dicons/3dicons/png/512/box-01.png" alt="Proven Results Icon" class="trust-icon" />
+              <img :src="homeTrust1" alt="Proven Results Icon" class="trust-icon" />
             </div>
-            <div class="trust-label">[ PROVEN RESULTS ]</div>
-            <div class="trust-title">200+ businesses automated</div>
+            <div class="trust-label">[ BUILT ON REAL NEEDS ]</div>
+            <div class="trust-title">Solutions born from real business challenges</div>
           </div>
           <!-- Card 2 -->
           <div class="trust-card">
             <div class="trust-icon-wrap">
-              <img src="https://cdn.jsdelivr.net/gh/3dicons/3dicons/png/512/puzzle-01.png" alt="Seamless Integration Icon" class="trust-icon" />
+              <img :src="homeTrust2" alt="Seamless Integration Icon" class="trust-icon" />
             </div>
-            <div class="trust-label">[ SEAMLESS AI INTEGRATION ]</div>
-            <div class="trust-title">Works with your existing tools</div>
+            <div class="trust-label">[ TAILORED AI ]</div>
+            <div class="trust-title">Tailored to your workflow, not off-the-shelf</div>
           </div>
           <!-- Card 3 -->
           <div class="trust-card">
             <div class="trust-icon-wrap">
-              <img src="https://cdn.jsdelivr.net/gh/3dicons/3dicons/png/512/cpu-01.png" alt="Custom AI Solutions Icon" class="trust-icon" />
+              <img :src="homeTrust3" alt="Custom AI Solutions Icon" class="trust-icon" />
             </div>
-            <div class="trust-label">[ TAILORED FOR YOU ]</div>
-            <div class="trust-title">Custom AI solutions</div>
+            <div class="trust-label">[ ALWAYS WITH YOU ]</div>
+            <div class="trust-title">We stay with you, from launch to growth</div>
           </div>
           <!-- Card 4 -->
           <div class="trust-card">
             <div class="trust-icon-wrap">
-              <img src="https://cdn.jsdelivr.net/gh/3dicons/3dicons/png/512/message-chat-01.png" alt="Ongoing Support Icon" class="trust-icon" />
+              <img :src="homeTrust4" alt="Ongoing Support Icon" class="trust-icon" />
             </div>
-            <div class="trust-label">[ ONGOING SUPPORT ]</div>
-            <div class="trust-title">We ensure your AI runs smoothly</div>
+            <div class="trust-label">[ RAPID EXECUTION ]</div>
+            <div class="trust-title">From brief to deployment — fast, focused, done</div>
           </div>
         </div>
         <!-- Caption and Logos -->
         <div class="mt-16">
           <div class="text-gray-400 text-base mb-8">
-            Trusted by leading companies in tech, finance and e-commerce
+            Trusted by leading companies in constuctions and biopharm
           </div>
           <div class="flex flex-wrap justify-center items-center gap-12 opacity-60 grayscale">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft" class="h-8" />
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg" alt="Nike" class="h-8" />
-            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" class="h-8" />
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM" class="h-8" />
-            <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix" class="h-8" />
+            <img :src="homeTrustLogo1" alt="ibm" class="h-8" />
+            <img :src="homeTrustLogo2" alt="mmc" class="h-8" />
+            <img :src="homeTrustLogo3" alt="biotis" class="h-8" />
           </div>
         </div>
       </div>
     </div>
   </section>
 </template>
+
+<script setup>
+import { ref, onMounted } from 'vue'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import homeTrust1 from '~/assets/images/home-trust-1.svg'
+import homeTrust2 from '~/assets/images/home-trust-2.svg'
+import homeTrust3 from '~/assets/images/home-trust-3.svg'
+import homeTrust4 from '~/assets/images/home-trust-4.svg'
+import homeTrustLogo1 from '~/assets/images/ibm.png'
+import homeTrustLogo2 from '~/assets/images/mmc.svg'
+import homeTrustLogo3 from '~/assets/images/biotis.png'
+
+const trustSection = ref(null)
+
+onMounted(() => {
+  if (process.client) {
+    gsap.registerPlugin(ScrollTrigger)
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: trustSection.value,
+        start: 'top 80%',
+        end: 'bottom 20%',
+        toggleActions: 'play none none reverse',
+      },
+    })
+
+    tl.from(trustSection.value.querySelector('h2'), {
+      opacity: 0,
+      y: 50,
+      duration: 0.8,
+      ease: 'power3.out',
+    })
+      .from(
+        trustSection.value.querySelectorAll('.trust-card'),
+        {
+          opacity: 0,
+          y: 50,
+          duration: 0.6,
+          stagger: 0.2,
+          ease: 'power3.out',
+        },
+        '-=0.5'
+      )
+      .from(
+        trustSection.value.querySelectorAll('.flex-wrap.justify-center.items-center'),
+        {
+          opacity: 0,
+          y: 30,
+          duration: 0.8,
+          ease: 'power3.out',
+        },
+        '-=0.5'
+      )
+  }
+})
+</script>
 
 <style scoped>
 .trust-gradient {
@@ -92,7 +148,7 @@
 }
 .trust-label {
   color: #b0b3c6;
-  font-size: 1.05rem;
+  font-size: 0.8rem;
   letter-spacing: 2px;
   margin-bottom: 20px;
   font-weight: 700;

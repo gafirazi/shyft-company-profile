@@ -1,10 +1,10 @@
 <template>
-  <section class="relative min-h-screen flex items-center bg-[#010319] overflow-hidden pt-32">
+  <section ref="heroSection" class="relative min-h-screen flex items-center bg-[#010319] overflow-hidden pt-32 hero-section">
     <!-- Spotlight effect -->
     <div class="absolute left-0 top-0 w-2/3 h-full pointer-events-none z-0">
       <div class="w-full h-full bg-gradient-to-br from-[#fff2] via-transparent to-transparent rounded-full blur-3xl opacity-40"></div>
     </div>
-    <div class="container-max relative z-10 py-24 flex flex-col lg:flex-row items-center justify-between gap-12">
+    <div class="container-max relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12">
       <!-- Left: Content -->
       <div class="flex-1 w-full max-w-2xl">
         <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-white mb-8">
@@ -16,7 +16,7 @@
         </p>
         <div class="flex items-center gap-6 flex-wrap">
           <button class="hero-cta flex items-center gap-3 px-6 py-3 rounded-full font-semibold text-white text-base shadow-xl bg-gradient-to-r from-[#6ec3f4] via-[#a18fff] to-[#f9d423] hover:scale-105 transition-transform">
-            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Mila S." class="w-8 h-8 rounded-full border-2 border-white shadow" />
+            <!-- <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Mila S." class="w-8 h-8 rounded-full border-2 border-white shadow" /> -->
             Get a Free AI Strategy Session
           </button>
           <!-- <div class="hidden md:block text-sm text-gray-400 ml-2">
@@ -31,7 +31,6 @@
           :src="heroImage"
           alt="3D Ring"
           class="w-[420px] h-[420px] object-contain drop-shadow-2xl select-none pointer-events-none"
-          style="filter: brightness(1.2) saturate(1.3) blur(0.5px);"
         />
       </div>
     </div>
@@ -44,6 +43,78 @@
 </template>
 
 <script setup>
-import heroImage from '~/assets/images/hero.png'
+import { ref, onMounted } from 'vue'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import heroImage from '~/assets/images/home-hero.png'
+
+const heroSection = ref(null)
+
+onMounted(() => {
+  if (process.client) {
+    gsap.registerPlugin(ScrollTrigger)
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: heroSection.value,
+        start: 'top 80%',
+        end: 'bottom 20%',
+        toggleActions: 'play none none reverse',
+      },
+    })
+
+    tl.from(heroSection.value.querySelector('h1'), {
+      opacity: 0,
+      y: 50,
+      duration: 0.8,
+      ease: 'power3.out',
+    })
+      .from(
+        heroSection.value.querySelector('p'),
+        {
+          opacity: 0,
+          y: 50,
+          duration: 0.8,
+          ease: 'power3.out',
+        },
+        '-=0.6'
+      )
+      .from(
+        heroSection.value.querySelector('.hero-cta'),
+        {
+          opacity: 0,
+          duration: 0.8,
+          ease: 'power3.out',
+        },
+        '-=0.6'
+      )
+      .from(
+        heroSection.value.querySelector('img'),
+        {
+          opacity: 0,
+          scale: 0.9,
+          duration: 1,
+          ease: 'power3.out',
+        },
+        '-=0.6'
+      )
+  }
+})
 </script>
 
+<style scoped>
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/assets/images/raylight.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top left;
+  opacity: 0.1; /* You can adjust this value from 0 (transparent) to 1 (opaque) */
+  z-index: 1;
+}
+</style>

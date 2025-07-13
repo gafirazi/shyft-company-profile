@@ -1,5 +1,5 @@
 <template>
-  <section class="section-padding bg-[#010319] py-20">
+  <section ref="contactSection" class="section-padding bg-[#010319] py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-16 items-center">
       
       <!-- Left Column: Text Content -->
@@ -15,7 +15,7 @@
       </div>
 
       <!-- Right Column: Form -->
-      <div class="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-sm">
+      <div class="form bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-sm">
         <form @submit.prevent="submitForm" class="space-y-6">
           <div>
             <label for="name" class="block text-white text-sm font-medium mb-2">Name</label>
@@ -66,13 +66,17 @@
 
 <script setup>
 // Basic script setup for form handling
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const form = ref({
   name: '',
   email: '',
   message: '',
 });
+
+const contactSection = ref(null);
 
 const submitForm = () => {
   // You can add your form submission logic here
@@ -82,5 +86,36 @@ const submitForm = () => {
   // form.value.email = '';
   // form.value.message = '';
 };
+
+onMounted(() => {
+  if (process.client) {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: contactSection.value,
+        start: 'top 80%',
+        end: 'bottom 20%',
+        toggleActions: 'play none none reverse',
+      },
+    });
+
+    tl.from(contactSection.value.querySelector('.text-white'), {
+      opacity: 0,
+      x: -50,
+      duration: 0.8,
+      ease: 'power3.out',
+    }).from(
+      contactSection.value.querySelector('.form'),
+      {
+        opacity: 0,
+        x: 50,
+        duration: 0.8,
+        ease: 'power3.out',
+      },
+      '-=0.5'
+    );
+  }
+});
 </script>
 

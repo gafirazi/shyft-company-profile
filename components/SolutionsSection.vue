@@ -1,5 +1,5 @@
 <template>
-  <section class="solutions-section bg-[#010319]">
+  <section ref="solutionsSection" class="solutions-section bg-[#010319]">
     <div class="max-w-[1200px] mx-auto px-4">
       <div class="solutions-header">
         <div>
@@ -57,10 +57,13 @@
 
 <script setup>
 import { ref, onMounted } from 'vue';
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 const fullText = '[ OUR SOLUTIONS ]';
 const typewriterText = ref('');
 const showCursor = ref(true);
+const solutionsSection = ref(null)
 
 onMounted(() => {
   let i = 0;
@@ -72,6 +75,36 @@ onMounted(() => {
     }
   }
   type();
+
+  if (process.client) {
+    gsap.registerPlugin(ScrollTrigger)
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: solutionsSection.value,
+        start: 'top 80%',
+        end: 'bottom 20%',
+        toggleActions: 'play none none reverse',
+      },
+    })
+
+    tl.from(solutionsSection.value.querySelector('.solutions-header'), {
+      opacity: 0,
+      y: 50,
+      duration: 0.8,
+      ease: 'power3.out',
+    }).from(
+      solutionsSection.value.querySelectorAll('.solution-card'),
+      {
+        opacity: 0,
+        y: 50,
+        duration: 0.6,
+        stagger: 0.2,
+        ease: 'power3.out',
+      },
+      '-=0.5'
+    )
+  }
 });
 </script>
 

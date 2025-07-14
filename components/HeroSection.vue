@@ -46,7 +46,7 @@
 import { ref, onMounted } from 'vue'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import heroImage from '~/assets/images/home-hero.png'
+import heroImage from '~/assets/images/home-hero.webp'
 
 const heroSection = ref(null)
 

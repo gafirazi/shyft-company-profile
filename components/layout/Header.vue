@@ -177,8 +177,6 @@
 import { ref, onMounted, onUnmounted } from 'vue';
 import { Bars3Icon, XMarkIcon, ChevronDownIcon } from '@heroicons/vue/24/solid';
 import logoWhite from '~/assets/images/logo-white.png'
-import { useI18n } from 'vue-i18n';
-
 const { locale, setLocale } = useI18n();
 
 const isMenuOpen = ref(false);

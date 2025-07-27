@@ -5,7 +5,7 @@
     <SolutionsSection />
     <CaseStudiesSection />
     <TrustSection />
-    <TechStackSection />
+    <!-- <TechStackSection /> -->
     <!-- <TestimonialsSection /> -->
     <!-- <PricingSection /> -->
     <!-- <TeamSection /> -->

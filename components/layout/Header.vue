@@ -1,6 +1,7 @@
 <template>
   <div class="fixed top-8 md:t-6 left-0 right-0 z-50 flex justify-center w-fit m-auto">
     <header 
+      ref="headerRef"
       :class="[
         'transition-all duration-300 rounded-full',
         { 'py-3 shadow-lg shadow-black/20': isScrolled, 'py-4': !isScrolled }
@@ -95,7 +96,7 @@
           </div>
 
           <!-- Mobile Menu Button -->
-          <button class="md:hidden text-white" @click="isMenuOpen = !isMenuOpen">
+          <button class="md:hidden text-white" @click.stop="isMenuOpen = !isMenuOpen">
             <Bars3Icon v-if="!isMenuOpen" class="h-6 w-6" />
             <XMarkIcon v-else class="h-6 w-6" />
           </button>
@@ -179,6 +180,7 @@ import { Bars3Icon, XMarkIcon, ChevronDownIcon } from '@heroicons/vue/24/solid';
 import logoWhite from '~/assets/images/logo-white.png'
 const { locale, setLocale } = useI18n();
 
+const headerRef = ref(null);
 const isMenuOpen = ref(false);
 const isScrolled = ref(false);
 const isLanguageDropdownOpen = ref(false);
@@ -223,8 +225,14 @@ const handleLanguageChange = (newLocale) => {
 };
 
 const handleClickOutside = (event) => {
+  // Close language dropdown if clicked outside
   if (!event.target.closest('.language-dropdown')) {
     isLanguageDropdownOpen.value = false;
+  }
+  
+  // Close mobile menu if clicked outside header
+  if (headerRef.value && !headerRef.value.contains(event.target)) {
+    isMenuOpen.value = false;
   }
 };
 </script> 

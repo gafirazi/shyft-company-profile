@@ -4,9 +4,9 @@
     <div class="absolute inset-0 w-full h-full pointer-events-none z-0">
       <div class="w-full h-full bg-gradient-to-br from-[#fff2] via-transparent to-transparent rounded-full blur-3xl opacity-40"></div>
     </div>
-    <div class="container-max relative z-10">
+    <div class="container-max relative z-10 mt-12">
       <!-- Content -->
-      <div class="max-w-4xl mx-auto">
+      <div class="max-w-4xl mx-auto px-4">
         <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-white mb-8">
           {{ $t('hero.title') }}
         </h1>

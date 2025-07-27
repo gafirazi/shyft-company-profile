@@ -1,6 +1,6 @@
 <template>
   <section ref="trustSection" class="section-padding bg-[#010319]">
-    <div class="max-w-[1200px] mx-auto px-4">
+    <div class="max-w-[1200px] mx-auto">
       <div class="container-max text-center">
         <h2 class="text-5xl md:text-6xl font-bold mb-2 text-white">
           {{ $t('trust.title') }}

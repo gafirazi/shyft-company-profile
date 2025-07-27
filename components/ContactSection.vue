@@ -1,6 +1,6 @@
 <template>
   <section ref="contactSection" class="section-padding bg-[#010319] py-12 md:py-20">
-    <div class="max-w-[1200px] mx-auto px-4 grid md:grid-cols-2 gap-8 md:gap-16 items-center">
+    <div class="max-w-[1200px] mx-auto grid md:grid-cols-2 gap-8 md:gap-16 items-center">
       
       <!-- Left Column: Text Content -->
       <div class="text-white">

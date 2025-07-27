@@ -1,6 +1,6 @@
 <template>
   <section ref="caseStudiesSection" class="section-padding bg-[#010319]">
-    <div class="max-w-[1200px] mx-auto px-4">
+    <div class="max-w-[1200px] mx-auto">
       <h2 class="text-4xl font-bold text-center mb-12">
         <span class="case-studies-title-white">{{ $t('case_studies.title') }}</span>
       </h2>

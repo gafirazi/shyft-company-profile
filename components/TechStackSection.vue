@@ -1,6 +1,6 @@
 <template>
   <section ref="techStackSection" class="section-padding bg-[#010319] overflow-hidden py-24 sm:py-32">
-    <div class="max-w-[1200px] mx-auto px-4">
+    <div class="max-w-[1200px] mx-auto">
       <div class="container-max text-center">
         <h2 class="text-4xl md:text-5xl font-bold mb-24 text-white">
           <span class="trust-gradient">{{ $t('tech_stack.title') }}</span>

@@ -1,6 +1,6 @@
 <template>
   <footer class="bg-[#010319] text-white">
-    <div class="max-w-[1200px] mx-auto px-4 section-padding">
+    <div class="max-w-[1200px] mx-auto section-padding">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
         <div>
           <img

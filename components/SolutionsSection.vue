@@ -4,50 +4,50 @@
       <div class="solutions-header">
         <div>
           <span class="solutions-label">
-            {{ typewriterText }}<span v-if="showCursor" class="animate-pulse">|</span>
+            {{ $t('solutions.label') }}
           </span>
           <h2 class="solutions-title">
-            Building <span class="ai-powered">AI-Powered</span><br />Workflow
+            {{ $t('solutions.title') }}
           </h2>
         </div>
         <p class="solutions-desc">
-          Our AI-driven automation eliminates busywork, streamlines your operations, and helps your business grow, without extra effort.
+          {{ $t('solutions.description') }}
         </p>
       </div>
       <div class="solutions-grid">
         <div class="solution-card main-card">
           <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80" alt="Workflow Automation" class="solution-img" />
           <div class="solution-content">
-            <h3>Workflow Automation</h3>
-            <p>Let AI handle repetitive tasks, so your team can focus on high-impact work.</p>
+            <h3>{{ $t('solutions.cards.workflow.title') }}</h3>
+            <p>{{ $t('solutions.cards.workflow.description') }}</p>
           </div>
         </div>
         <div class="solution-card">
           <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80" alt="AI Chatbots & Virtual Assistants" class="solution-img" />
           <div class="solution-content">
-            <h3>AI Chatbots & Virtual Assistants</h3>
-            <p>Enhance customer experience with 24/7 AI-driven support.</p>
+            <h3>{{ $t('solutions.cards.chatbots.title') }}</h3>
+            <p>{{ $t('solutions.cards.chatbots.description') }}</p>
           </div>
         </div>
         <div class="solution-card">
           <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Personalized AI Marketing" class="solution-img" />
           <div class="solution-content">
-            <h3>Personalized AI Marketing</h3>
-            <p>Send smarter messages at the right moment with AI.</p>
+            <h3>{{ $t('solutions.cards.marketing.title') }}</h3>
+            <p>{{ $t('solutions.cards.marketing.description') }}</p>
           </div>
         </div>
         <div class="solution-card">
           <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80" alt="CRM Automation" class="solution-img" />
           <div class="solution-content">
-            <h3>CRM Automation</h3>
-            <p>Capture, qualify, and route leads focuses only on the right prospects automatically.</p>
+            <h3>{{ $t('solutions.cards.crm.title') }}</h3>
+            <p>{{ $t('solutions.cards.crm.description') }}</p>
           </div>
         </div>
         <div class="solution-card">
           <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80" alt="Custom AI Integrations" class="solution-img" />
           <div class="solution-content">
-            <h3>Custom AI Integrations</h3>
-            <p>Seamlessly integrate AI into your existing business systems.</p>
+            <h3>{{ $t('solutions.cards.integrations.title') }}</h3>
+            <p>{{ $t('solutions.cards.integrations.description') }}</p>
           </div>
         </div>
       </div>

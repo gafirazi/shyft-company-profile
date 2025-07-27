@@ -2,17 +2,16 @@
   <section ref="caseStudiesSection" class="section-padding bg-[#010319]">
     <div class="max-w-[1200px] mx-auto px-4">
       <h2 class="text-4xl font-bold text-center mb-12">
-        <span class="case-studies-title-white">See Our </span><span class="case-studies-title-gradient">Work in Action</span>
+        <span class="case-studies-title-white">{{ $t('case_studies.title') }}</span>
       </h2>
       <div class="case-studies-list">
         <div class="case-study-card">
           <div class="case-study-left">
-            <div class="case-study-label">[ 01 ]</div>
-            <div class="case-study-title">AI-Powered Project Accounting - Construction Company</div>
-            <div class="case-study-desc">An intelligent accounting system with a built-in AI agent helped an electrical construction company reduce manual workload and boost reporting accuracy — improving cash flow tracking and enabling faster project insights.</div>
+            <div class="case-study-label">{{ $t('case_studies.study_1.label') }}</div>
+            <div class="case-study-title">{{ $t('case_studies.study_1.title') }}</div>
+            <div class="case-study-desc">{{ $t('case_studies.study_1.description') }}</div>
             <div class="case-study-tags">
-              <span class="case-study-tag">Construction</span>
-              <span class="case-study-tag">AI-automation</span>
+              <span class="case-study-tag" v-for="tag in $tm('case_studies.study_1.tags')" :key="tag">{{ tag.loc.source }}</span>
             </div>
           </div>
           <div class="case-study-right">
@@ -23,12 +22,11 @@
         </div>
         <div class="case-study-card">
           <div class="case-study-left">
-            <div class="case-study-label">[ 02 ]</div>
-            <div class="case-study-title">Back Office System - Sharia Housing Developer</div>
-            <div class="case-study-desc">A tailored back-office system streamlined unit sales, customer management, and progress tracking for a fast-growing Sharia-compliant housing developer, saving hours of administrative work each week.</div>
+            <div class="case-study-label">{{ $t('case_studies.study_2.label') }}</div>
+            <div class="case-study-title">{{ $t('case_studies.study_2.title') }}</div>
+            <div class="case-study-desc">{{ $t('case_studies.study_2.description') }}</div>
             <div class="case-study-tags">
-              <span class="case-study-tag">Real Estate</span>
-              <span class="case-study-tag">Proptech</span>
+              <span class="case-study-tag" v-for="tag in $tm('case_studies.study_2.tags')" :key="tag">{{ tag.loc.source }}</span>
             </div>
           </div>
           <div class="case-study-right">
@@ -39,12 +37,11 @@
         </div>
         <div class="case-study-card">
           <div class="case-study-left">
-            <div class="case-study-label">[ 03 ]</div>
-            <div class="case-study-title">Real-Time Staff Reporting System - Biopharma Company</div>
-            <div class="case-study-desc">Internal reporting system for Biotis employees to log daily work activities in real time. The system enforces live photo capture via camera only to ensure authenticity and prevent fraud from gallery uploads — improving transparency and accountability across operations.</div>
+            <div class="case-study-label">{{ $t('case_studies.study_3.label') }}</div>
+            <div class="case-study-title">{{ $t('case_studies.study_3.title') }}</div>
+            <div class="case-study-desc">{{ $t('case_studies.study_3.description') }}</div>
             <div class="case-study-tags">
-              <span class="case-study-tag">Internal Tools</span>
-              <span class="case-study-tag">Real-Time Reporting</span>
+              <span class="case-study-tag" v-for="tag in $tm('case_studies.study_3.tags')" :key="tag">{{ tag.loc.source }}</span>
             </div>
           </div>
           <div class="case-study-right">

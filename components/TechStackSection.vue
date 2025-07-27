@@ -3,7 +3,7 @@
     <div class="max-w-[1200px] mx-auto px-4">
       <div class="container-max text-center">
         <h2 class="text-4xl md:text-5xl font-bold mb-24 text-white">
-          Our <span class="trust-gradient">Tech Stack</span>
+          <span class="trust-gradient">{{ $t('tech_stack.title') }}</span>
         </h2>
 
         <div class="tech-stack-container" :class="{ expanded: isExpanded }">

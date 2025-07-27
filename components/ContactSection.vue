@@ -4,13 +4,12 @@
       
       <!-- Left Column: Text Content -->
       <div class="text-white">
-        <p class="text-sm uppercase tracking-[0.2em] text-gray-400 mb-4">[ Contact Us ]</p>
+        <p class="text-sm uppercase tracking-[0.2em] text-gray-400 mb-4">{{ $t('contact.label') }}</p>
         <h2 class="text-5xl font-bold mb-6 leading-tight">
-          Ready to <span class="text-purple-400">Automate</span><br>
-          Your Business?
+          {{ $t('contact.title') }}
         </h2>
         <p class="text-lg text-gray-300 max-w-lg">
-          Let AI handle the hard work while you focus on growth. Book a free AI strategy session today.
+          {{ $t('contact.subtitle') }}
         </p>
       </div>
 
@@ -18,7 +17,7 @@
       <div class="form bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-sm">
         <form @submit.prevent="submitForm" class="space-y-6">
           <div>
-            <label for="name" class="block text-white text-sm font-medium mb-2">Name</label>
+            <label for="name" class="block text-white text-sm font-medium mb-2">{{ $t('contact.form.name') }}</label>
             <input 
               type="text" 
               id="name" 
@@ -27,7 +26,7 @@
             >
           </div>
           <div>
-            <label for="email" class="block text-white text-sm font-medium mb-2">Email</label>
+            <label for="email" class="block text-white text-sm font-medium mb-2">{{ $t('contact.form.email') }}</label>
             <input 
               type="email" 
               id="email" 
@@ -36,7 +35,7 @@
             >
           </div>
           <div>
-            <label for="message" class="block text-white text-sm font-medium mb-2">Message</label>
+            <label for="message" class="block text-white text-sm font-medium mb-2">{{ $t('contact.form.message') }}</label>
             <textarea 
               id="message" 
               rows="4" 
@@ -47,15 +46,13 @@
           
           <div class="flex flex-wrap items-center justify-between gap-4 pt-4">
             <p class="text-xs text-gray-400">
-              By submitting, you agree to our 
-              <a href="#" class="text-white underline hover:text-purple-300 transition">Terms</a> and 
-              <a href="#" class="text-white underline hover:text-purple-300 transition">Privacy Policy</a>.
+              {{ $t('contact.form.terms') }}
             </p>
             <button 
               type="submit" 
               class="bg-[#2C2B54] hover:bg-purple-700 text-white font-semibold py-3 px-10 rounded-full transition-colors duration-300"
             >
-              Submit
+              {{ $t('contact.form.submit') }}
             </button>
           </div>
         </form>

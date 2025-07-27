@@ -1,7 +1,22 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/i18n'],
+  i18n: {
+    locales: [
+      {
+        code: 'id',
+        file: 'id-ID.json'
+      },
+      {
+        code: 'en',
+        file: 'en-US.json'
+      }
+    ],
+    lazy: true,
+    langDir: 'lang',
+    defaultLocale: 'id'
+  },
   css: ['~/assets/css/main.css'],
   app: {
     head: {

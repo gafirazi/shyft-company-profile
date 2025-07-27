@@ -25,8 +25,14 @@
               @click.prevent="handleScrollToSection(item.href.substring(1))"
               class="text-white/70 hover:text-white transition-colors whitespace-nowrap"
             >
-              {{ item.name }}
+              {{ $t(item.name) }}
             </a>
+          </div>
+
+          <!-- Language Switcher -->
+          <div class="hidden md:flex items-center space-x-4">
+            <button @click="setLocale('id')" :class="{ 'text-white': locale === 'id', 'text-white/70': locale !== 'id' }">ID</button>
+            <button @click="setLocale('en')" :class="{ 'text-white': locale === 'en', 'text-white/70': locale !== 'en' }">EN</button>
           </div>
 
           <!-- Contact Button -->
@@ -35,7 +41,7 @@
               @click.prevent="handleScrollToSection('contact')"
               class="px-6 py-2 rounded-full bg-gradient-to-r from-[#A250F7] to-[#1e93d7] text-white hover:opacity-90 transition-all whitespace-nowrap"
             >
-              Get Started
+              {{ $t('hero.cta') }}
             </button>
           </div>
 
@@ -65,13 +71,13 @@
                   @click.prevent="handleScrollToSection(item.href.substring(1))"
                   class="text-white/80 hover:text-white transition-colors py-2 text-center"
                 >
-                  {{ item.name }}
+                  {{ $t(item.name) }}
                 </a>
                 <button 
                   @click.prevent="handleScrollToSection('contact')"
                   class="w-full py-2 rounded-full bg-gradient-to-r from-[#A250F7] to-[#1e93d7] text-white hover:opacity-90 transition-all"
                 >
-                  Get Started
+                  {{ $t('hero.cta') }}
                 </button>
               </div>
             </div>
@@ -94,15 +100,18 @@
 import { ref, onMounted, onUnmounted } from 'vue';
 import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/solid';
 import logoWhite from '~/assets/images/logo-white.png'
+import { useI18n } from 'vue-i18n';
+
+const { locale, setLocale } = useI18n();
 
 const isMenuOpen = ref(false);
 const isScrolled = ref(false);
 
 const navItems = [
-  { name: 'Services', href: '#services' },
-  { name: 'About', href: '#about' },
-  { name: 'Features', href: '#features' },
-  { name: 'Testimonials', href: '#testimonials' },
+  { name: 'header.services', href: '#services' },
+  { name: 'header.about', href: '#about' },
+  { name: 'header.features', href: '#features' },
+{ name: 'header.contact', href: '#contact' },
 ];
 
 const handleScroll = () => {

@@ -1,0 +1,98 @@
+{
+  "header": {
+    "services": "Services",
+    "about": "About Us",
+    "features": "Features",
+    "contact": "Contact Us"
+  },
+  "hero": {
+    "title": "Turning Business into AI-Powered Machine",
+    "subtitle": "A result-focused design partner to help you automate workflows, optimize operations, and scale faster with AI solutions.",
+    "cta": "Get a Free AI Strategy Session"
+  },
+  "solutions": {
+    "label": "[ OUR SOLUTIONS ]",
+    "title": "Building AI-Powered Workflow",
+    "description": "Our AI-driven automation eliminates busywork, streamlines your operations, and helps your business grow, without extra effort.",
+    "cards": {
+      "workflow": {
+        "title": "Workflow Automation",
+        "description": "Let AI handle repetitive tasks, so your team can focus on high-impact work."
+      },
+      "chatbots": {
+        "title": "AI Chatbots & Virtual Assistants",
+        "description": "Enhance customer experience with 24/7 AI-driven support."
+      },
+      "marketing": {
+        "title": "Personalized AI Marketing",
+        "description": "Send smarter messages at the right moment with AI."
+      },
+      "crm": {
+        "title": "CRM Automation",
+        "description": "Capture, qualify, and route leads focuses only on the right prospects automatically."
+      },
+      "integrations": {
+        "title": "Custom AI Integrations",
+        "description": "Seamlessly integrate AI into your existing business systems."
+      }
+    }
+  },
+  "case_studies": {
+    "title": "See Our Work in Action",
+    "study_1": {
+      "label": "[ 01 ]",
+      "title": "AI-Powered Project Accounting - Construction Company",
+      "description": "An intelligent accounting system with a built-in AI agent helped an electrical construction company reduce manual workload and boost reporting accuracy — improving cash flow tracking and enabling faster project insights.",
+      "tags": ["Construction", "AI-automation"]
+    },
+    "study_2": {
+      "label": "[ 02 ]",
+      "title": "Back Office System - Sharia Housing Developer",
+      "description": "A tailored back-office system streamlined unit sales, customer management, and progress tracking for a fast-growing Sharia-compliant housing developer, saving hours of administrative work each week.",
+      "tags": ["Real Estate", "Proptech"]
+    },
+    "study_3": {
+      "label": "[ 03 ]",
+      "title": "Real-Time Staff Reporting System - Biopharma Company",
+      "description": "Internal reporting system for Biotis employees to log daily work activities in real time. The system enforces live photo capture via camera only to ensure authenticity and prevent fraud from gallery uploads — improving transparency and accountability across operations.",
+      "tags": ["Internal Tools", "Real-Time Reporting"]
+    }
+  },
+  "trust": {
+    "title": "Why Brands Trust Us",
+    "cards": {
+      "needs": {
+        "label": "[ BUILT ON REAL NEEDS ]",
+        "title": "Solutions born from real business challenges"
+      },
+      "tailored": {
+        "label": "[ TAILORED AI ]",
+        "title": "Tailored to your workflow, not off-the-shelf"
+      },
+      "support": {
+        "label": "[ ALWAYS WITH YOU ]",
+        "title": "We stay with you, from launch to growth"
+      },
+      "execution": {
+        "label": "[ RAPID EXECUTION ]",
+        "title": "From brief to deployment — fast, focused, done"
+      }
+    },
+    "caption": "Trusted by leading companies in constuctions and biopharm"
+  },
+  "tech_stack": {
+    "title": "Our Tech Stack"
+  },
+  "contact": {
+    "label": "[ Contact Us ]",
+    "title": "Ready to Automate Your Business?",
+    "subtitle": "Let AI handle the hard work while you focus on growth. Book a free AI strategy session today.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "terms": "By submitting, you agree to our Terms and Privacy Policy.",
+      "submit": "Submit"
+    }
+  }
+}

@@ -3,7 +3,7 @@
     <div class="max-w-[1200px] mx-auto px-4">
       <div class="container-max text-center">
         <h2 class="text-5xl md:text-6xl font-bold mb-2 text-white">
-          Why Brands <span class="trust-gradient">Trust Us</span>
+          {{ $t('trust.title') }}
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mt-12">
           <!-- Card 1 -->
@@ -11,38 +11,38 @@
             <div class="trust-icon-wrap">
               <img :src="homeTrust1" alt="Proven Results Icon" class="trust-icon" />
             </div>
-            <div class="trust-label">[ BUILT ON REAL NEEDS ]</div>
-            <div class="trust-title">Solutions born from real business challenges</div>
+            <div class="trust-label">{{ $t('trust.cards.needs.label') }}</div>
+            <div class="trust-title">{{ $t('trust.cards.needs.title') }}</div>
           </div>
           <!-- Card 2 -->
           <div class="trust-card">
             <div class="trust-icon-wrap">
               <img :src="homeTrust2" alt="Seamless Integration Icon" class="trust-icon" />
             </div>
-            <div class="trust-label">[ TAILORED AI ]</div>
-            <div class="trust-title">Tailored to your workflow, not off-the-shelf</div>
+            <div class="trust-label">{{ $t('trust.cards.tailored.label') }}</div>
+            <div class="trust-title">{{ $t('trust.cards.tailored.title') }}</div>
           </div>
           <!-- Card 3 -->
           <div class="trust-card">
             <div class="trust-icon-wrap">
               <img :src="homeTrust3" alt="Custom AI Solutions Icon" class="trust-icon" />
             </div>
-            <div class="trust-label">[ ALWAYS WITH YOU ]</div>
-            <div class="trust-title">We stay with you, from launch to growth</div>
+            <div class="trust-label">{{ $t('trust.cards.support.label') }}</div>
+            <div class="trust-title">{{ $t('trust.cards.support.title') }}</div>
           </div>
           <!-- Card 4 -->
           <div class="trust-card">
             <div class="trust-icon-wrap">
               <img :src="homeTrust4" alt="Ongoing Support Icon" class="trust-icon" />
             </div>
-            <div class="trust-label">[ RAPID EXECUTION ]</div>
-            <div class="trust-title">From brief to deployment — fast, focused, done</div>
+            <div class="trust-label">{{ $t('trust.cards.execution.label') }}</div>
+            <div class="trust-title">{{ $t('trust.cards.execution.title') }}</div>
           </div>
         </div>
         <!-- Caption and Logos -->
         <div class="mt-16">
           <div class="text-gray-400 text-base mb-8">
-            Trusted by leading companies in constuctions and biopharm
+            {{ $t('trust.caption') }}
           </div>
           <div class="flex flex-wrap justify-center items-center gap-12 opacity-60 grayscale">
             <img :src="homeTrustLogo1" alt="ibm" class="h-8" />

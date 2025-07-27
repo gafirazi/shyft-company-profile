@@ -1,0 +1,98 @@
+{
+  "header": {
+    "services": "Solusi",
+    "about": "Tentang Kami",
+    "features": "Fitur",
+    "contact": "Kontak Kami"
+  },
+  "hero": {
+    "title": "Mengubah Bisnis menjadi Mesin Berbasis AI",
+    "subtitle": "Mitra desain yang berfokus pada hasil untuk membantu Anda mengotomatisasikan alur kerja, mengoptimalkan operasi, dan berkembang lebih cepat dengan solusi AI.",
+    "cta": "Dapatkan Sesi Strategi AI Gratis"
+  },
+  "solutions": {
+    "label": "[ SOLUSI KAMI ]",
+    "title": "Membangun Alur Kerja Berbasis AI",
+    "description": "Otomatisasi berbasis AI kami menghilangkan pekerjaan yang membosankan, menyederhanakan operasi Anda, dan membantu bisnis Anda tumbuh, tanpa usaha ekstra.",
+    "cards": {
+      "workflow": {
+        "title": "Otomatisasi Alur Kerja",
+        "description": "Biarkan AI menangani tugas-tugas berulang, sehingga tim Anda dapat fokus pada pekerjaan berdampak tinggi."
+      },
+      "chatbots": {
+        "title": "Chatbot & Asisten Virtual AI",
+        "description": "Tingkatkan pengalaman pelanggan dengan dukungan berbasis AI 24/7."
+      },
+      "marketing": {
+        "title": "Pemasaran AI yang Dipersonalisasi",
+        "description": "Kirim pesan yang lebih cerdas pada saat yang tepat dengan AI."
+      },
+      "crm": {
+        "title": "Otomatisasi CRM",
+        "description": "Tangkap, kualifikasi, dan rutekan prospek secara otomatis hanya pada prospek yang tepat."
+      },
+      "integrations": {
+        "title": "Integrasi AI Kustom",
+        "description": "Integrasikan AI dengan mulus ke dalam sistem bisnis Anda yang sudah ada."
+      }
+    }
+  },
+  "case_studies": {
+    "title": "Lihat Aksi Kami",
+    "study_1": {
+      "label": "[ 01 ]",
+      "title": "Akuntansi Proyek Berbasis AI - Perusahaan Konstruksi",
+      "description": "Sistem akuntansi cerdas dengan agen AI bawaan membantu perusahaan konstruksi listrik mengurangi beban kerja manual dan meningkatkan akurasi pelaporan — meningkatkan pelacakan arus kas dan memungkinkan wawasan proyek yang lebih cepat.",
+      "tags": ["Konstruksi", "Otomatisasi AI"]
+    },
+    "study_2": {
+      "label": "[ 02 ]",
+      "title": "Sistem Back Office - Pengembang Perumahan Syariah",
+      "description": "Sistem back-office yang disesuaikan menyederhanakan penjualan unit, manajemen pelanggan, dan pelacakan kemajuan untuk pengembang perumahan syariah yang berkembang pesat, menghemat jam kerja administratif setiap minggu.",
+      "tags": ["Real Estat", "Proptech"]
+    },
+    "study_3": {
+      "label": "[ 03 ]",
+      "title": "Sistem Pelaporan Staf Real-Time - Perusahaan Biofarma",
+      "description": "Sistem pelaporan internal bagi karyawan Biotis untuk mencatat aktivitas kerja harian secara real time. Sistem ini memberlakukan pengambilan foto langsung melalui kamera saja untuk memastikan keaslian dan mencegah penipuan dari unggahan galeri — meningkatkan transparansi dan akuntabilitas di seluruh operasi.",
+      "tags": ["Alat Internal", "Pelaporan Real-Time"]
+    }
+  },
+  "trust": {
+    "title": "Mengapa Mereka Mempercayai Kami",
+    "cards": {
+      "needs": {
+        "label": "[ DIBANGUN DARI KEBUTUHAN NYATA ]",
+        "title": "Solusi yang lahir dari tantangan bisnis nyata"
+      },
+      "tailored": {
+        "label": "[ AI YANG DISESUAIKAN ]",
+        "title": "Disesuaikan dengan alur kerja Anda, bukan siap pakai"
+      },
+      "support": {
+        "label": "[ SELALU BERSAMA ANDA ]",
+        "title": "Kami tetap bersama Anda, dari peluncuran hingga pertumbuhan"
+      },
+      "execution": {
+        "label": "[ EKSEKUSI CEPAT ]",
+        "title": "Dari singkat hingga penerapan — cepat, fokus, selesai"
+      }
+    },
+    "caption": "Dipercaya oleh perusahaan terkemuka di bidang konstruksi dan biofarmasi"
+  },
+  "tech_stack": {
+    "title": "Tumpukan Teknologi Kami"
+  },
+  "contact": {
+    "label": "[ Hubungi Kami ]",
+    "title": "Siap Mengotomatisasikan Bisnis Anda?",
+    "subtitle": "Biarkan AI menangani pekerjaan berat sementara Anda fokus pada pertumbuhan. Pesan sesi strategi AI gratis hari ini.",
+    "form": {
+      "name": "Nama",
+      "email": "Email",
+      "message": "Pesan",
+      "terms": "Dengan mengirimkan, Anda menyetujui Persyaratan dan Kebijakan Privasi kami.",
+      "submit": "Kirim"
+    }
+  }
+}

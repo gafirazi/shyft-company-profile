@@ -13,7 +13,7 @@
   "solutions": {
     "label": "[ SOLUSI KAMI ]",
     "title": "Membangun Alur Kerja Berbasis AI",
-    "description": "Otomatisasi berbasis AI kami menghilangkan pekerjaan yang membosankan, menyederhanakan operasi Anda, dan membantu bisnis Anda tumbuh, tanpa usaha ekstra.",
+    "description": "Otomatisasi berbasis AI kami menghilangkan pekerjaan yang repetitif, menyederhanakan serta mempercepat operasi, dan membantu bisnis Anda tumbuh, tanpa usaha ekstra.",
     "cards": {
       "workflow": {
         "title": "Otomatisasi Alur Kerja",
@@ -94,5 +94,31 @@
       "terms": "Dengan mengirimkan, Anda menyetujui Persyaratan dan Kebijakan Privasi kami.",
       "submit": "Kirim"
     }
+  },
+  "footer": {
+    "company_description": "Solusi otomatisasi berbasis AI untuk menyederhanakan operasi bisnis Anda.",
+    "services": {
+      "title": "Solusi",
+      "workflow_automation": "Otomatisasi Alur Kerja",
+      "ai_chatbots": "Chatbot AI",
+      "crm_automation": "Otomatisasi CRM",
+      "custom_integrations": "Integrasi Kustom"
+    },
+    "company": {
+      "title": "Perusahaan",
+      "case_studies": "Studi Kasus",
+      "pricing": "Harga",
+      "contact": "Kontak",
+      "blog": "Blog"
+    },
+    "contact": {
+      "title": "Kontak"
+    },
+    "social": {
+      "twitter": "X/Twitter",
+      "instagram": "Instagram",
+      "linkedin": "LinkedIn"
+    },
+    "copyright": "© 2025 Shyft Hak Cipta Dilindungi"
   }
 }

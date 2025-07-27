@@ -94,5 +94,31 @@
       "terms": "By submitting, you agree to our Terms and Privacy Policy.",
       "submit": "Submit"
     }
+  },
+  "footer": {
+    "company_description": "AI-powered automation solutions to streamline your business operations.",
+    "services": {
+      "title": "Services",
+      "workflow_automation": "Workflow Automation",
+      "ai_chatbots": "AI Chatbots",
+      "crm_automation": "CRM Automation",
+      "custom_integrations": "Custom Integrations"
+    },
+    "company": {
+      "title": "Company",
+      "case_studies": "Case Studies",
+      "pricing": "Pricing",
+      "contact": "Contact",
+      "blog": "Blog"
+    },
+    "contact": {
+      "title": "Contact"
+    },
+    "social": {
+      "twitter": "X/Twitter",
+      "instagram": "Instagram",
+      "linkedin": "LinkedIn"
+    },
+    "copyright": "© 2025 Shyft All Rights Reserved"
   }
 }

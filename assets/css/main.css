@@ -11,6 +11,11 @@
     font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     @apply text-gray-900;
   }
+
+  /* Reset default browser margins on section elements */
+  section {
+    margin: 0;
+  }
 }
 
 @layer components {

@@ -14,7 +14,8 @@ export default defineNuxtConfig({
       }
     ],
     langDir: 'lang',
-    defaultLocale: 'id'
+    defaultLocale: 'id',
+    detectBrowserLanguage: false
   },
   css: ['~/assets/css/main.css'],
   app: {

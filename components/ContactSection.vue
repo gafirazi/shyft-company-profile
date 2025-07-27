@@ -1,21 +1,21 @@
 <template>
-  <section ref="contactSection" class="section-padding bg-[#010319] py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-16 items-center">
+  <section ref="contactSection" class="section-padding bg-[#010319] py-12 md:py-20">
+    <div class="max-w-[1200px] mx-auto px-4 grid md:grid-cols-2 gap-8 md:gap-16 items-center">
       
       <!-- Left Column: Text Content -->
       <div class="text-white">
         <p class="text-sm uppercase tracking-[0.2em] text-gray-400 mb-4">{{ $t('contact.label') }}</p>
-        <h2 class="text-5xl font-bold mb-6 leading-tight">
+        <h2 class="text-3xl md:text-5xl font-bold mb-4 md:mb-6 leading-tight">
           {{ $t('contact.title') }}
         </h2>
-        <p class="text-lg text-gray-300 max-w-lg">
+        <p class="text-base md:text-lg text-gray-300 max-w-lg">
           {{ $t('contact.subtitle') }}
         </p>
       </div>
 
       <!-- Right Column: Form -->
-      <div class="form bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-sm">
-        <form @submit.prevent="submitForm" class="space-y-6">
+      <div class="form bg-white/5 border border-white/10 rounded-2xl p-6 md:p-8 backdrop-blur-sm">
+        <form @submit.prevent="submitForm" class="space-y-4 md:space-y-6">
           <div>
             <label for="name" class="block text-white text-sm font-medium mb-2">{{ $t('contact.form.name') }}</label>
             <input 
@@ -44,13 +44,13 @@
             ></textarea>
           </div>
           
-          <div class="flex flex-wrap items-center justify-between gap-4 pt-4">
-            <p class="text-xs text-gray-400">
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 pt-4">
+            <p class="text-xs text-gray-400 order-2 md:order-1">
               {{ $t('contact.form.terms') }}
             </p>
             <button 
               type="submit" 
-              class="bg-[#2C2B54] hover:bg-purple-700 text-white font-semibold py-3 px-10 rounded-full transition-colors duration-300"
+              class="bg-[#2C2B54] hover:bg-purple-700 text-white font-semibold py-3 px-8 md:px-10 rounded-full transition-colors duration-300 order-1 md:order-2 w-full md:w-auto"
             >
               {{ $t('contact.form.submit') }}
             </button>

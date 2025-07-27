@@ -2,7 +2,7 @@
   <section ref="solutionsSection" class="solutions-section bg-[#010319]">
     <div class="max-w-[1200px] mx-auto px-4">
       <div class="solutions-header">
-        <div>
+        <div class="flex-shrink-0">
           <span class="solutions-label">
             {{ $t('solutions.label') }}
           </span>
@@ -125,7 +125,8 @@ onMounted(() => {
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 48px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  gap: 30px;
 }
 .solutions-label {
   font-size: 14px;

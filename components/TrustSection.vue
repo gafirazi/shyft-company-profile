@@ -48,6 +48,8 @@
             <img :src="homeTrustLogo1" alt="ibm" class="h-8" />
             <img :src="homeTrustLogo2" alt="mmc" class="h-8" />
             <img :src="homeTrustLogo3" alt="biotis" class="h-8" />
+            <img :src="homeTrustLogo4" alt="kolegium-orthodonti" class="h-8" />
+            <img :src="homeTrustLogo5" alt="seniun-hadafa" class="h-8" />
           </div>
         </div>
       </div>
@@ -66,6 +68,8 @@ import homeTrust4 from '~/assets/images/home-trust-4.svg'
 import homeTrustLogo1 from '~/assets/images/ibm.png'
 import homeTrustLogo2 from '~/assets/images/mmc.svg'
 import homeTrustLogo3 from '~/assets/images/biotis.png'
+import homeTrustLogo4 from '~/assets/images/logo-kolesium-orthodonti.png'
+import homeTrustLogo5 from '~/assets/images/logo-seniun-hadafa.png'
 
 const trustSection = ref(null)
 

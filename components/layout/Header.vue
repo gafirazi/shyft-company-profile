@@ -9,11 +9,11 @@
       <div class="relative px-6">
         <nav class="flex justify-between items-center gap-6">
           <div class="flex items-center">
-            <span 
-              class="text-2xl font-bold bg-gradient-to-r from-[#9245FC] to-purple-500 bg-clip-text text-transparent"
+            <img
+              :src="logoWhite"
+              alt="logo"
+              class="h-[32px] w-auto object-cover"
             >
-              Shyft
-            </span>
           </div>
 
           <!-- Desktop Navigation -->
@@ -93,6 +93,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
 import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/solid';
+import logoWhite from '~/assets/images/logo-white.png'
 
 const isMenuOpen = ref(false);
 const isScrolled = ref(false);

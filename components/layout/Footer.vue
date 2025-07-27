@@ -3,7 +3,11 @@
     <div class="container-max section-padding">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
         <div>
-          <h3 class="text-xl font-bold mb-4">Shyft</h3>
+          <img
+            :src="logoWhite"
+            alt="logo"
+            class="h-[28px] w-auto object-cover mb-[10px]"
+          >
           <p class="text-gray-400">AI-powered automation solutions to streamline your business operations.</p>
         </div>
         
@@ -47,3 +51,7 @@
     </div>
   </footer>
 </template> 
+
+<script setup>
+  import logoWhite from '~/assets/images/logo-white.png'
+</script>

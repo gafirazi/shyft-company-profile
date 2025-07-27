@@ -11,7 +11,7 @@
             <div class="case-study-title">{{ $t('case_studies.study_1.title') }}</div>
             <div class="case-study-desc">{{ $t('case_studies.study_1.description') }}</div>
             <div class="case-study-tags">
-              <span class="case-study-tag" v-for="tag in $t('case_studies.study_1.tags')" :key="tag">{{ tag }}</span>
+              <span class="case-study-tag" v-for="tag in $tm('case_studies.study_1.tags')" :key="tag">{{ $rt(tag) }}</span>
             </div>
           </div>
           <div class="case-study-right">
@@ -26,7 +26,7 @@
             <div class="case-study-title">{{ $t('case_studies.study_2.title') }}</div>
             <div class="case-study-desc">{{ $t('case_studies.study_2.description') }}</div>
             <div class="case-study-tags">
-              <span class="case-study-tag" v-for="tag in $t('case_studies.study_2.tags')" :key="tag">{{ tag }}</span>
+              <span class="case-study-tag" v-for="tag in $tm('case_studies.study_2.tags')" :key="tag">{{ $rt(tag) }}</span>
             </div>
           </div>
           <div class="case-study-right">
@@ -41,7 +41,7 @@
             <div class="case-study-title">{{ $t('case_studies.study_3.title') }}</div>
             <div class="case-study-desc">{{ $t('case_studies.study_3.description') }}</div>
             <div class="case-study-tags">
-              <span class="case-study-tag" v-for="tag in $t('case_studies.study_3.tags')" :key="tag">{{ tag }}</span>
+              <span class="case-study-tag" v-for="tag in $tm('case_studies.study_3.tags')" :key="tag">{{ $rt(tag) }}</span>
             </div>
           </div>
           <div class="case-study-right">
@@ -56,7 +56,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, computed } from 'vue'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 

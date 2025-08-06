@@ -19,7 +19,7 @@
       <span>Dummy thought bubble 3</span>
     </div>
     <div ref="centerText" class="is-this-you-center text-center">
-      <h2 class="text-5xl md:text-7xl font-bold mb-0">
+              <h2 class="text-5xl md:text-7xl font-normal mb-0">
         <span class="text-white">Is This </span>
         <span class="bg-gradient-to-r from-[#a18fff] to-[#6ec3f4] bg-clip-text text-transparent">You?</span>
       </h2>

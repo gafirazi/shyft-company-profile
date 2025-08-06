@@ -1,20 +1,20 @@
 <template>
-  <section ref="heroSection" class="relative min-h-screen flex items-center justify-center bg-[#010319] overflow-hidden text-center hero-section">
+  <section ref="heroSection" class="relative min-h-screen flex items-center justify-center overflow-hidden text-center hero-section">
     <!-- Spotlight effect -->
     <div class="absolute inset-0 w-full h-full pointer-events-none z-0">
       <div class="w-full h-full bg-gradient-to-br from-[#fff2] via-transparent to-transparent rounded-full blur-3xl opacity-40"></div>
     </div>
     <div class="container-max relative z-10 mt-12">
       <!-- Content -->
-      <div class="max-w-4xl mx-auto px-4">
-        <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-white mb-8">
+      <div class="max-w-[1200px] mx-auto px-4">
+        <h1 class="text-4xl md:text-6xl lg:text-[98px] leading-tight text-white mb-8">
           {{ $t('hero.title') }}
         </h1>
-        <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+        <p class="text-md md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
           {{ $t('hero.subtitle') }}
         </p>
         <div class="flex justify-center">
-          <button class="hero-cta flex items-center gap-3 px-8 py-4 rounded-full font-semibold text-white text-lg shadow-xl bg-gradient-to-r from-[#6ec3f4] via-[#a18fff] to-[#f9d423] hover:scale-105 transition-transform">
+          <button class="hero-cta flex items-center gap-3 px-8 py-4 rounded-full font-medium text-white text-lg shadow-xl bg-gradient-to-r from-[#1A56EE] to-[#4FC3F7] hover:scale-105 transition-transform">
             {{ $t('hero.cta') }}
           </button>
         </div>
@@ -80,11 +80,17 @@ onMounted(() => {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('/assets/images/raylight.png');
+  /* background-image: url('/assets/images/raylight.png'); */
   background-size: contain;
   background-repeat: no-repeat;
   background-position: top left;
   opacity: 0.1; /* You can adjust this value from 0 (transparent) to 1 (opaque) */
   z-index: 1;
+}
+
+.hero-section {
+  background: radial-gradient(circle at -9% 22%, #1A56EE 0%, transparent 35%),
+            radial-gradient(circle at 100% 22%, #1A56EE 0%, transparent 35%),
+            linear-gradient(to bottom, #010319 0%, #010319 40%, #010319 70%, #010319 100%);
 }
 </style>

@@ -4,8 +4,8 @@
       
       <!-- Left Column: Text Content -->
       <div class="text-white">
-        <p class="text-sm uppercase tracking-[0.2em] text-gray-400 mb-4">{{ $t('contact.label') }}</p>
-        <h2 class="text-3xl md:text-5xl font-bold mb-4 md:mb-6 leading-tight">
+        <p ref="contactLabel" class="text-sm uppercase tracking-[0.2em] text-gray-400 mb-4">{{ contactTypewriterText }}</p>
+        <h2 class="text-3xl md:text-5xl font-normal mb-4 md:mb-6 leading-tight">
           {{ $t('contact.title') }}
         </h2>
         <p class="text-base md:text-lg text-gray-300 max-w-lg">
@@ -50,7 +50,7 @@
             </p>
             <button 
               type="submit" 
-              class="bg-[#2C2B54] hover:bg-purple-700 text-white font-semibold py-3 px-8 md:px-10 rounded-full transition-colors duration-300 order-1 md:order-2 w-full md:w-auto"
+              class="bg-gradient-to-r from-[#1A56EE] to-[#4FC3F7] hover:opacity-90 hover:scale-105 text-white font-semibold py-3 px-8 md:px-10 rounded-full transition-all duration-300 order-1 md:order-2 w-full md:w-auto shadow-lg"
             >
               {{ $t('contact.form.submit') }}
             </button>
@@ -74,6 +74,10 @@ const form = ref({
 });
 
 const contactSection = ref(null);
+const contactLabel = ref(null);
+const contactTypewriterText = ref('');
+const contactHasAnimated = ref(false);
+const contactFullText = '[ CONTACT US ]';
 
 const submitForm = () => {
   // You can add your form submission logic here
@@ -84,9 +88,33 @@ const submitForm = () => {
   // form.value.message = '';
 };
 
+const startContactTypewriter = () => {
+  if (contactHasAnimated.value) return;
+  
+  contactHasAnimated.value = true;
+  let i = 0;
+  
+  function type() {
+    if (i <= contactFullText.length) {
+      contactTypewriterText.value = contactFullText.slice(0, i);
+      i++;
+      setTimeout(type, 60);
+    }
+  }
+  type();
+};
+
 onMounted(() => {
   if (process.client) {
     gsap.registerPlugin(ScrollTrigger);
+
+    // Typewriter effect trigger for contact label
+    ScrollTrigger.create({
+      trigger: contactLabel.value,
+      start: 'top 90%',
+      onEnter: startContactTypewriter,
+      once: true // This ensures it only triggers once
+    });
 
     const tl = gsap.timeline({
       scrollTrigger: {

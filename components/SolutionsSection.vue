@@ -3,8 +3,8 @@
     <div class="max-w-[1200px] mx-auto px-4">
       <div class="solutions-header">
         <div class="flex-shrink-0">
-          <span class="solutions-label">
-            {{ $t('solutions.label') }}
+          <span ref="solutionsLabel" class="solutions-label">
+            {{ typewriterText }}
           </span>
           <h2 class="solutions-title">
             {{ $t('solutions.title') }}
@@ -64,9 +64,15 @@ const fullText = '[ OUR SOLUTIONS ]';
 const typewriterText = ref('');
 const showCursor = ref(true);
 const solutionsSection = ref(null)
+const solutionsLabel = ref(null)
+const hasAnimated = ref(false)
 
-onMounted(() => {
+const startTypewriter = () => {
+  if (hasAnimated.value) return;
+  
+  hasAnimated.value = true;
   let i = 0;
+  
   function type() {
     if (i <= fullText.length) {
       typewriterText.value = fullText.slice(0, i);
@@ -75,10 +81,21 @@ onMounted(() => {
     }
   }
   type();
+};
 
+onMounted(() => {
   if (process.client) {
     gsap.registerPlugin(ScrollTrigger)
 
+    // Typewriter effect trigger
+    ScrollTrigger.create({
+      trigger: solutionsLabel.value,
+      start: 'top 90%',
+      onEnter: startTypewriter,
+      once: true // This ensures it only triggers once
+    });
+
+    // Existing animations
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: solutionsSection.value,
@@ -137,7 +154,7 @@ onMounted(() => {
 }
 .solutions-title {
   font-size: 48px;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.1;
   margin-bottom: 0;
 }
@@ -147,7 +164,6 @@ onMounted(() => {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-fill-color: transparent;
 }
 .solutions-desc {
   max-width: 340px;
@@ -186,7 +202,7 @@ onMounted(() => {
   z-index: 2;
 }
 .solution-card:hover {
-  /* transform: translateY(-4px) scale(1.03); */
+  transform: translateY(-2px);
 }
 .solution-img {
   position: absolute;
@@ -204,7 +220,7 @@ onMounted(() => {
 }
 .solution-content h3 {
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 400;
   margin-bottom: 8px;
   color: #fff;
   text-shadow: 0 2px 12px #a18aff33;

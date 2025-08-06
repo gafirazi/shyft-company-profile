@@ -2,7 +2,7 @@
   <section ref="trustSection" class="section-padding bg-[#010319]">
     <div class="max-w-[1200px] mx-auto">
       <div class="container-max text-center">
-        <h2 class="text-5xl md:text-6xl font-bold mb-2 text-white">
+        <h2 class="text-5xl md:text-6xl font-normal mb-2 text-white">
           {{ $t('trust.title') }}
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mt-12">
@@ -155,13 +155,13 @@ onMounted(() => {
   font-size: 0.8rem;
   letter-spacing: 2px;
   margin-bottom: 20px;
-  font-weight: 700;
+  font-weight: 400;
   text-transform: uppercase;
 }
 .trust-title {
   color: #fff;
   font-size: 1.35rem;
-  font-weight: 700;
+  font-weight: 400;
   text-align: center;
 }
 @media (max-width: 900px) {

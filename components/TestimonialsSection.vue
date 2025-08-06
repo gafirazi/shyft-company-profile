@@ -3,10 +3,10 @@
     <div class="container mx-auto px-4 max-w-[1200px]">
       <div class="flex justify-between items-center mb-8">
         <div>
-          <p class="text-sm font-bold tracking-widest text-gray-400">
+          <p class="text-sm font-normal tracking-widest text-gray-400">
             {{ typewriterText }}<span v-if="showCursor" class="animate-pulse">|</span>
           </p>
-          <h2 class="text-4xl md:text-5xl font-bold mt-2 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-white">What Our Clients Say</h2>
+          <h2 class="text-4xl md:text-5xl font-normal mt-2 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-white">What Our Clients Say</h2>
         </div>
         <div class="hidden md:flex space-x-4">
           <button class="swiper-button-prev-custom p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors disabled:opacity-50">
@@ -37,7 +37,7 @@
             <div class="flex items-center justify-center md:justify-start">
               <img :src="testimonial.image" alt="" class="w-16 h-16 rounded-full mr-4">
               <div>
-                <p class="font-bold text-lg">{{ testimonial.name }}</p>
+                <p class="font-normal text-lg">{{ testimonial.name }}</p>
                 <p class="text-gray-400">{{ testimonial.title }}</p>
               </div>
             </div>

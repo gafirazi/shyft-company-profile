@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-[#010319] text-white">
+  <footer class="footer text-white">
     <div class="max-w-[1200px] mx-auto section-padding">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
         <div>
@@ -12,7 +12,7 @@
         </div>
         
         <div>
-          <h4 class="font-semibold mb-4">{{ $t('footer.services.title') }}</h4>
+          <h4 class="font-normal mb-4">{{ $t('footer.services.title') }}</h4>
           <ul class="space-y-2 text-gray-400">
             <li><a href="#" class="hover:text-white transition-colors">{{ $t('footer.services.workflow_automation') }}</a></li>
             <li><a href="#" class="hover:text-white transition-colors">{{ $t('footer.services.ai_chatbots') }}</a></li>
@@ -22,7 +22,7 @@
         </div>
         
         <div>
-          <h4 class="font-semibold mb-4">{{ $t('footer.company.title') }}</h4>
+          <h4 class="font-normal mb-4">{{ $t('footer.company.title') }}</h4>
           <ul class="space-y-2 text-gray-400">
             <li><a href="#" class="hover:text-white transition-colors">{{ $t('footer.company.case_studies') }}</a></li>
             <li><a href="#" class="hover:text-white transition-colors">{{ $t('footer.company.pricing') }}</a></li>
@@ -32,7 +32,7 @@
         </div>
         
         <div>
-          <h4 class="font-semibold mb-4">{{ $t('footer.contact.title') }}</h4>
+          <h4 class="font-normal mb-4">{{ $t('footer.contact.title') }}</h4>
           <div class="space-y-2 text-gray-400">
             <!-- <p>+1234 567 89</p> -->
             <p>shyftid@gmail.com</p>
@@ -45,7 +45,7 @@
         </div>
       </div>
       
-      <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+      <div class="border-t border-gray-400 mt-8 pt-8 text-center text-gray-400">
         <p>{{ $t('footer.copyright') }}</p>
       </div>
     </div>
@@ -55,3 +55,14 @@
 <script setup>
   import logoWhite from '~/assets/images/logo-white.png'
 </script>
+
+<style scoped>
+.footer {
+  background: radial-gradient(ellipse at 30% 90%, #1A56EE 0%, transparent 50%),
+            radial-gradient(ellipse at 70% 80%, #1A56EE 0%, transparent 45%),
+            linear-gradient(to bottom, #010319 0%, #010319 30%, #010319 100%);
+  background-size: 100% 200%; /* ← Increase height here */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+</style>
